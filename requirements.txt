@@ -1,0 +1,14 @@
+# Указываем PyTorch и Torchvision из вашей рабочей среды, но с суффиксом +cpu
+# Примечание: torch 2.7.1 может быть pre-release версией. Если возникнут проблемы,
+# попробуйте torch==2.5.1+cpu, он тоже совместим с torchvision==0.22.1+cpu.
+torch==2.7.1+cpu
+torchvision==0.22.1+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Остальные зависимости, версии взяты из вашего `pip list` для консистентности
+timm==1.0.15
+fastapi==0.115.12
+uvicorn[standard]==0.34.3
+python-multipart==0.0.9 # Оставим старую версию, т.к. 0.0.20 может быть несовместима с fastapi 0.115
+Pillow==11.2.1
+numpy==2.2.6

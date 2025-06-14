@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  tagger-api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models:ro
+    environment:
+      - MODEL_PATH=/app/models/best_model.pth
+    restart: unless-stopped

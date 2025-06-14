@@ -1,0 +1,10 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# IDEs
+.idea/
+.vscode/
+
+models/*.pth
